@@ -1,0 +1,33 @@
+<div class="fcol_around_c w-33 h-100">
+    <button id="standard" class="diff param btn checked">ESTÁNDAR</button>
+    <button id="unknown" class="diff param btn disabled">INCÓGNITA</button>
+    <button id="result" class="diff param btn disabled">RESULTADO</button>
+</div>
+
+<div class="fcol_c_c w-33 h-100">
+    <div id="difficulty" class="param mb-2 fcol_c_c">
+        <span id="difficulty_text">FÁCIL</span>
+        <input type="range" id="change_diff" class="mb-2" min="0" max="5" step="1" value="1">
+    </div>
+</div>
+
+<div class="fcol_c_c w-33 h-100">
+    <span id="info_mess"></span>
+    <div id="intervals" class="interval_group hidden">
+        <div class="one_interval">
+            <label>de</label><input type="text" id="nb1_min" class="nb"><br>
+            <label>a</label><input type="text" id="nb1_max" class="nb">
+        </div>
+
+        <div class="op_sign">+</div>
+
+        <div class="one_interval">
+            <label>de</label><input type="text" id="nb2_min" class="nb"><br>
+            <label>a</label><input type="text" id="nb2_max" class="nb">
+        </div>
+    </div>
+
+    <div id="carry_option">
+        <button id="carry" class="param btn checked">LLEVANDO</button>
+    </div>
+</div>

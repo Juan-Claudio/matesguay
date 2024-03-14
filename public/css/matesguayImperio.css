@@ -1,0 +1,392 @@
+
+html, body
+{
+    margin:0px;
+    padding:0px;
+
+    overflow:auto;
+
+    width:100%;
+    height:100%;
+    min-width:1300px;
+    min-height:900px;
+}
+body
+{
+    background-image: url("../img/matesguay_oceano.jpg");
+    background-position: center;
+    background-size:cover;
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    overflow:hidden;
+}
+#gameWindow /*canvas map*/
+{
+    background-image: url("../img/map_background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/**************************
+****** BARRA SUPERIOR *****
+**************************/
+#recap
+{
+    background-color: #7c7259;
+    box-shadow: 0px 0px 15px 6px #000;
+
+    border-radius: 15px;
+    border-top: #4c4131 4px solid;
+    border-bottom: #4c4131 4px solid;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-left: 5px;
+    padding-right:5px;
+
+    position: fixed;
+    left:auto; top:10px;
+
+    height:46px;
+    
+    color:rgb(200, 200, 255);
+}
+.blockInfo
+{
+    background-color: #6e6651;
+
+    border-right:3px #4c4131 solid;
+    border-left:3px #4c4131 solid;
+    border-radius: 5px;
+
+    margin-right:10px;
+    margin-left:10px;
+    padding-left:2px;
+    padding-right:2px;
+
+    text-align: center;
+}
+.blockTitle
+{
+    color:white;
+    font-weight: bold;
+}
+.bar_button
+{
+    background-color: #6e6651;
+
+    border-right:3px #4c4131 solid;
+    border-left:3px #4c4131 solid;
+    border-radius: 5px;
+
+    cursor:pointer;
+
+    margin-right:10px;
+    margin-left:10px;
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-left:4px;
+    padding-right:4px;
+
+    color:white;
+    text-align: center;
+    font-weight: bold;
+}
+.bar_button:hover
+{
+    color: #682323;
+}
+#add_btn, #quit_btn
+{
+    border-top:none;
+    border-bottom:none;
+    width:30px;
+    margin-right:3px;
+    margin-left:3px;
+    font-size: large;
+}
+#add_btn
+{
+    background-color: rgba(0,255,0,0.1);
+    color:#fff;
+}
+#quit_btn
+{
+    background-color: #6e6651;
+    color:#aaa;
+}
+
+/*CONGRESS VIEW*/
+#lock_back
+{
+    background-color:rgba(0, 0, 0, 0.7);
+
+    display:none;
+
+    position:absolute;
+    left:0; top:0;
+    z-index:0;
+    
+    /*size*/
+    width:100%;
+    height:100%;
+    min-width:1300px;
+    min-height:900px;
+}
+#congress_content
+{
+    /*display*/
+    display: none;
+    
+    /*position*/
+    position:absolute;
+    left:calc(50% - 455px);
+    top:calc(50% - 376px);
+    z-index:1;
+    
+    /*size*/
+    width:910px;
+    height:732px;
+}
+#congress
+{
+    /*flex*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    /*position*/
+    position:absolute;
+    left:0; top:0;
+    z-index:2;
+    
+    /*text*/
+}
+.display_result
+{
+    /*flex*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /*position*/
+    position:absolute;
+    z-index:3;
+
+    /*size*/
+    width:105px;
+    height:55px;
+    
+    /*text*/
+    font-size: 150%;
+    font-weight:bold;
+    font-style:italic;
+}
+#player_result
+{
+    left:6px;
+    top:145px;
+    color:#2c2cff;
+}
+#opponent_result
+{
+    right:6px;
+    top:140px;
+}
+#test
+{
+    /*background-color*/
+    background-color:rgba(0,0,0,0.9);
+
+    /*border*/
+    border-radius: 15px;
+
+    /*flex*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    /*position*/
+    position:absolute;
+    left:calc(50% - 200px);
+    top:85px;
+    z-index:3;
+
+    /*size*/
+    width:400px;
+    height:100px;
+    
+    /*text*/
+    color:#fff;
+    font-weight: bold;
+    font-size:xx-large;
+}
+#nb1, #nb2, #result
+{
+    /*border*/
+    border: 1px #fff solid;
+
+    /*flex*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /*size*/
+    width:60px;
+    height:60px;
+    max-width:20%;
+    max-height:50%;
+}
+#interval1, #interval2, #result_counter
+{    
+    /*cursor*/
+    cursor:help;
+    
+    /*position*/
+    position:absolute;
+
+    /*size*/
+    width:60px;
+    
+    /*text*/
+    text-align: center;
+    color:#999;
+    font-size: medium;
+    font-weight: normal;
+}
+#interval1
+{
+    left:15px; top:80px;
+}
+#interval2
+{
+    left:170px; top:80px;
+}
+#result_counter
+{
+    right:15px; top:0px;
+}
+#share_influence
+{
+    /*background*/
+    background-color:rgba(124, 114, 89,0.7);
+    /*background-color: #7c7259;*/
+
+    /*border*/
+    border:#4c4131 solid 4px;
+    border-right: none;
+    border-left: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 15px black;
+
+    /*display*/
+    display:none;
+
+    /*margin-padding*/
+    padding:10px;
+
+    /*position*/
+    position: absolute;
+    left: calc(50% - 250px); top:calc(50% - 120px);
+    z-index:1;
+
+    /*size*/
+    width:500px;
+    height:240px;
+
+    /*text*/
+    text-align: center;
+}
+#share_influence_contener
+{
+    /*flex*/
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.share_influence_box
+{
+    /*background*/
+    background-color: #a59b83;
+
+    /*border*/
+    border:#4c4131 solid 4px;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 10px;
+
+    /*flex*/
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    /*margin*/
+    margin:auto;
+    
+    /*size*/
+    width:60px;
+    height:60px;
+
+    /*text*/
+    font-weight:bold;
+}
+.share_influence_column
+{
+    text-align: center;
+
+    /*size*/
+    width:200px;
+}
+#validate_share_influence
+{
+    color:darkred;
+}
+button
+{
+    cursor: pointer;
+}
+#good_answer
+{
+    /*background*/
+    background-color:rgba(0, 0, 0, 0.9);
+
+    /*border*/
+    border-radius:10px;
+
+    /*position*/
+    position:absolute;
+    left:5px; top:200px;
+    z-index: 2;
+
+    /*size*/
+    width:900px;
+
+    /*text*/
+    text-align: center;
+    color:#faa;
+    font-size: xx-large;
+}
+#ai_anim
+{
+    display: none;
+
+    position:absolute;
+    z-index: 1;
+}
+#left_touch_keyboard, #right_touch_keyboard
+{
+    display:none;
+}

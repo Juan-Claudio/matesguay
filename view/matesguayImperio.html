@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conquista Mental</title>
+        <link href="../public/css/matesguayImperio.css" rel="stylesheet">
+        <link href="../public/css/mobile.css" rel="stylesheet">
+        <link href="https://www.sabeludia.com/sabeludia32x32.png" rel="icon">
+    </head>
+    <body>
+        
+        <!-- MENU BAR -->
+        <div id="recap">
+            <div id="add_quit">
+                <button class="bar_button" id="add_btn"> + </button>
+                <button class="bar_button" id="quit_btn"> - </button>
+            </div>
+            <div class="blockInfo">
+                <div class="blockTitle">Influencia</div>
+                <div id="popularityScoreGain">0</div>
+            </div>
+            <div class="blockInfo">
+                <div class="blockTitle">Elecciones</div>
+                <div id="nbEleccionRestante">5</div>
+            </div>
+            
+            <div id="endTurn_influencia" class="bar_button">Fin Turno</div>
+        </div>
+        
+        <!-- GAME CANVAS -->
+        <canvas id="gameWindow" width="1229" height="819">Tu navegador es demasiado viejo para poder jugar a los juegos de este sitio web</canvas>
+
+        <!-- AI ANIM -->
+        <div id="ai_anim"><img src="../public/img/hourglass.gif"></div>
+
+        <!-- CONGRESS VOTE WINDOW -->
+        <div id="congress_content">
+            <canvas id="congress" width="910" height="732"></canvas>
+            <div class="display_result" id="player_result"></div>
+            <div class="display_result" id="opponent_result"></div>
+            <div id="test"></div>
+        </div>
+
+        <!-- LEFT TOUCHSCREEN KEYBORD -->
+        <div id="left_touch_keyboard">
+            <div class="columns">
+                <div id="column1">
+                    <div class="key" id="key7">7</div>
+                    <div class="key" id="key4">4</div>
+                    <div class="key" id="key1">1</div>
+                </div>
+                <div id="column2">
+                    <div class="key" id="key8">8</div>
+                    <div class="key" id="key5">5</div>
+                    <div class="key" id="key2">2</div>
+                </div>
+            </div>
+            <div class="key big" id="key0">0</div>
+        </div>
+        <!-- RIGHT TOUCHSCREEN KEYBORD -->
+        <div id="right_touch_keyboard">
+            <div class="columns">
+                <div id="column3">
+                    <div class="key" id="key9">9</div>
+                    <div class="key" id="key6">6</div>
+                    <div class="key" id="key3">3</div>
+                </div>
+                <div id="column4">
+                    <div class="key red" id="back_erase">←</div>
+                    <div class="key red" id="erase_all">✖</div>
+                    <div class="key red" id="left_key">&lt;</div>
+                </div>
+            </div>
+            <div class="key big green" id="key_ok">&gt;</div>
+        </div>
+
+        <!-- SHARE INFLUENCE WINDOW -->
+        <div id="share_influence">
+            <h2>¿CUÁNTA INFLUENCIA PARA<br>NUESTRO NUEVO MIEMBRO?</h2>
+            <div id="share_influence_contener">
+                <div class="share_influence_column">
+                    <h4>DISPONIBLE</h4>
+                    <div class="share_influence_box" id="left_influence_points"></div>
+                </div>
+                <div>
+                    <button id="validate_share_influence">OK</button>
+                    <br><br><br>
+                    <button id="right_more_influence">&gt;</button>
+                    <br><br>
+                    <button id="left_more_influence">&lt;</button>
+                </div>
+                <div class="share_influence_column">
+                    <h4>NUEVO MIEMBRO</h4>
+                    <div class="share_influence_box" id="right_influence_points">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOCKBACK to partialy hide back -->
+        <div id="lock_back"></div>
+        
+        <!-- ALL SCRIPT -->
+        <script src="../../libs/jquery-3.6.0.min.js"></script>
+        <script src="../public/js/map_saved.js"></script>
+        <script src="../controller/Operation.js"></script>
+        <script src="../controller/Graphics.js"></script>
+        <script src="../controller/Game.js"></script>
+        
+        <script>            
+            $(document).ready(()=>{
+                Game.init("gameWindow");
+            });
+        </script>
+    </body>
+</html>

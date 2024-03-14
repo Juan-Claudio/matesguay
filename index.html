@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="public/css/index2.css?v=5" rel="stylesheet">
+    <link href="https://www.sabeludia.com/sabeludia32x32.png" rel="icon">
+    <title>Parametros de Matesguay</title>
+</head>
+<body>
+    <!-- div to avoid merge margin-top with body -->
+    <div class="no_mergin">no text</div>
+
+    <!-- tabs with operations name -->
+    <div class="all_tab">
+        <button class="tab disabled" id="1sum">SUMA</button>
+        <button class="tab disabled" id="2sub">RESTA</button>
+        <button class="tab disabled" id="3mul">PRODUCT.</button>
+        <button class="tab disabled" id="4div">DIVISIÓN</button>
+    </div>
+
+    <!-- settings zone -->
+    <div class="param_contener"></div>
+
+    <!-- Ai level and buttons to play -->
+    <div class="jugar_cargar frow_around_c">
+        <button id="play" class="param btn">JUGAR</button>
+        <div id="difficulty" class="param mb-2 fcol_c_c">
+            <span class="txt-m txt-000">Adversario</span>
+            <span id="ai_level" class="txt-m">MUY MALO</span>
+            <input type="range" id="change_ai_level" class="mb-2" min="0" max="5" step="1" value="0">
+        </div>
+        <button id="load" class="param btn">CARGAR</button>
+    </div>
+    
+    <script src="../libs/jquery-3.6.0.min.js"></script>
+    <script src="controller/Indexev.js"></script>
+    <script>
+        Indexev.init();
+    </script>
+</body>
+</html>
