@@ -24,4 +24,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by the game RISK
 
 ## Contact
-For questions or feedback, contact [angeelric@gmail.com](mailto:angeelric@gmail.com).
+For questions or feedback, contact [juanclaudio.g0r0@gmail.com](mailto:angeelric@gmail.com).
