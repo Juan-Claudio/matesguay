@@ -1,5 +1,8 @@
 # Matesguay
 
+## Language
+This application is available only in Spanish. / Esta aplicación está disponible en español.
+
 ## Description
 This application aims to enhance mental arithmetic skills.
 Inspired by the game RISK, this educational game replaces soldiers with deputies and wars with voting.
